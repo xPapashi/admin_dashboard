@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: auto 1fr;
+}
+
+.sidebar {
+    background-color: lightblue;
+    grid-row: span 3;
+}
+
+.header {
+    background-color: lightsalmon;
+    grid-column: span 2;
+}
+
+.article {
+    background-color:blanchedalmond;
+}
+
+.announcements {
+    grid-column: 3 / 4;
+    background-color: lightseagreen;
+}
+
+.trending {
+    grid-column: 3 / 4;
+    background-color: lightgreen;
+}
+
+.footer {
+    grid-column: 1 / 4;
+    background-color: lightgray;
+}

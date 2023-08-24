@@ -7,12 +7,12 @@
     display: grid;
     height: 100vh;
     grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: auto 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
 }
 
 .sidebar {
     background-color: lightblue;
-    grid-row: span 3;
+    grid-row: 1 / 4;
 }
 
 .header {
@@ -21,6 +21,7 @@
 }
 
 .article {
+    grid-row: 2 / 4;
     background-color:blanchedalmond;
 }
 

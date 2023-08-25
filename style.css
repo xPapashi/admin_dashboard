@@ -112,7 +112,7 @@ ul li {
 /* MAIN */
 .main {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 2fr minmax(180px, 280px);
     grid-template-rows: 5px 1fr 5px;
     grid-column: 2 / 4;
     padding: 1.5em 1.5em 0 1.5em;
@@ -157,7 +157,7 @@ ul li {
 
 .card .description {
     font-size: 13px;
-    color: rgb(116, 116, 116);
+    color: #747474;
 }
 
 /* ANNOUNCEMENTS */
@@ -168,15 +168,62 @@ ul li {
 
 .announcements {
     /* grid-column: 3 / 4; */
+    border-radius: 8px;
+    padding: 2em;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
 
-    background-color: #fff
+.announcements .message {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #aaaaaa;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.announcements .description
+{
+    font-size: 13px;
+    font-weight: 400;
+    color: #747474;
 }
 
 /* TRENDING */
 
+.trending-title {
+    font-weight: 500;
+}
+
 .trending {
     /* grid-column: 3 / 4; */
-    background-color: lightgreen;
+    border-radius: 8px;
+    padding: 2em;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(auto-fit, minmax(20px, 1fr));
+    gap: 12px;
+}
+
+.trending .person {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+}
+
+.person .pic {
+    grid-column: 1 / 2;
+}
+
+.person .name, .tag {
+    grid-column: 2 / 3;
+    font-size: 13px;
+}
+
+.person .tag {
+    font-size: 13px;
+    color: #747474;
 }
 
 /* FOOTER */

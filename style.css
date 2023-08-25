@@ -5,8 +5,6 @@
     font-family: 'Roboto', sans-serif;
 }
 
-svg {fill: white;}
-
 /* CONTENT */
 
 .content {
@@ -22,7 +20,7 @@ svg {fill: white;}
     background-color: #1581e6;
     display: grid;
     grid-template-columns: 150px;
-    grid-template-rows: auto 1fr 1fr;
+    grid-template-rows: auto 30% 1fr;
     grid-row: 1 / 4;
     padding-left: 2rem;
     padding-top: 1rem;
@@ -37,6 +35,7 @@ svg {fill: white;}
     font-size: 1.5em;
     margin-bottom: 2em;
     column-gap: 10px;
+    fill: white;
 }
 
 .links-top ul, .links-bot ul{
@@ -58,6 +57,7 @@ li {
 li svg {
     width: 1em;
     padding-right: 1em;
+    fill: white;
 }
 
 /* HEADER */
@@ -78,6 +78,11 @@ li svg {
     align-items: center;
 }
 
+.search .icon {
+    width: 1.3rem;
+    padding-top: 5px;
+}
+
 .search .bar {
     background-color: rgba(211, 211, 211, 0.459);
     height: 45%;
@@ -87,9 +92,24 @@ li svg {
 
 .header .profile {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 10% 25% 40%;
     align-items: center;
     justify-items: center;
+    justify-content: end;
+}
+
+.profile .icon {
+    width: 1.3em;
+}
+
+.profile .pic img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.profile .name {
+    font-weight: 500;
 }
 
 .header .post {
@@ -97,6 +117,16 @@ li svg {
     grid-template-columns: auto 1fr;
     gap: 15px;
     align-items: center;
+}
+
+.post .pic img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.post .message {
+    line-height: 20px;
 }
 
 .message .welcome {
@@ -161,6 +191,8 @@ li svg {
     padding-left: 15px;
     padding-top: 2em;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    display: grid;
+    grid-template-rows: 1fr 60%;
 }
 
 .card p {
@@ -178,6 +210,24 @@ li svg {
     color: #747474;
 }
 
+.card .buttons {
+    display: flex;
+    gap: 2em;
+    width: 120px;
+}
+
+.buttons svg {
+    cursor: pointer;
+}
+
+.card >*:last-child {
+    align-self: flex-end;
+    margin-top: 1.5em;
+    padding-right: 2em;
+    justify-self: end;
+
+}
+
 /* ANNOUNCEMENTS */
 
 .announcements-title {
@@ -187,7 +237,7 @@ li svg {
 .announcements {
     /* grid-column: 3 / 4; */
     border-radius: 8px;
-    padding: 2em;
+    padding: 2em 2em 0 2em;
     background-color: #fff;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
@@ -198,6 +248,10 @@ li svg {
     border-bottom: 1px solid #aaaaaa;
     font-size: 15px;
     font-weight: 500;
+}
+
+.announcements .message:last-child {
+    border-bottom: none;
 }
 
 .announcements .description

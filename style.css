@@ -38,6 +38,16 @@
     fill: white;
 }
 
+.sidebar .title, .sidebar .logo {
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+
+.sidebar .logo:hover {
+    color: #333;
+    fill: #333;
+}
+
 .links-top ul, .links-bot ul{
     display: grid;
     gap: 1rem;
@@ -47,6 +57,12 @@
 
 ul li {
     list-style-type: none;
+    cursor: pointer;
+}
+
+ul li:hover, li:hover svg {
+    color: #333;
+    fill: #333;
 }
 
 li {
@@ -58,6 +74,10 @@ li svg {
     width: 1em;
     padding-right: 1em;
     fill: white;
+}
+
+li, svg {
+    transition: 0.3s ease;
 }
 
 /* HEADER */
@@ -81,6 +101,7 @@ li svg {
 .search .icon {
     width: 1.3rem;
     padding-top: 5px;
+    cursor: pointer;
 }
 
 .search .bar {
@@ -100,16 +121,29 @@ li svg {
 
 .profile .icon {
     width: 1.3em;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.profile .icon:hover {
+    fill: #333;
 }
 
 .profile .pic img {
     width: 40px;
     height: 40px;
     border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.profile .pic img:hover {
+    opacity: 80%;
 }
 
 .profile .name {
     font-weight: 500;
+    cursor: pointer;
 }
 
 .header .post {
@@ -154,6 +188,11 @@ li svg {
     color: #fff;
     font-weight: 600;
     cursor: pointer;
+    transition: 0.3s;
+}
+
+.action-buttons button:hover {
+    background-color: #2d94f3;
 }
 
 /* MAIN */
@@ -203,6 +242,7 @@ li svg {
 
 .card .title {
     font-weight: 600;
+    cursor: pointer;
 }
 
 .card .description {
@@ -218,11 +258,16 @@ li svg {
 
 .buttons svg {
     cursor: pointer;
+    transition: 0.2s;
+}
+
+.buttons svg:hover {
+    fill: #3f3e3e;
 }
 
 .card >*:last-child {
     align-self: flex-end;
-    margin-top: 1.5em;
+    margin-bottom: 1.5em;
     padding-right: 2em;
     justify-self: end;
 
@@ -248,6 +293,7 @@ li svg {
     border-bottom: 1px solid #aaaaaa;
     font-size: 15px;
     font-weight: 500;
+    cursor: pointer;
 }
 
 .announcements .message:last-child {
@@ -280,12 +326,22 @@ li svg {
 }
 
 .trending .person {
-    display: grid;
-    grid-template-columns: 50px 1fr;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    padding-bottom: 10px;
 }
 
-.person .pic {
-    grid-column: 1 / 2;
+.person img {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.person img:hover {
+    opacity: 80%;
 }
 
 .person .name, .tag {
